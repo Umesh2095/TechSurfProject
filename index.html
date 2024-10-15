@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>techSurf Projects</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Main UI Builder Container -->
+    <div class="ui-builder-container">
+      <!-- Left Sidebar: Component List -->
+      <div class="left-sidebar">
+        <h3>Components</h3>
+        <ul class="component-list">
+          <li class="component-item" draggable="true" data-type="header">
+            Header
+          </li>
+          <li class="component-item" draggable="true" data-type="text-block">
+            Text Block
+          </li>
+          <li class="component-item" draggable="true" data-type="image">
+            Image
+          </li>
+          <li class="component-item" draggable="true" data-type="button">
+            Button
+          </li>
+          <li class="component-item" draggable="true" data-type="list">
+            List/Grid
+          </li>
+        </ul>
+      </div>
+
+      <!-- Canvas Section for Drag-and-Drop -->
+      <div class="canvas" id="canvas">
+        <h2>Drop Components Here</h2>
+      </div>
+
+      <!-- Right Sidebar: Design and Data Customization -->
+      <div class="right-sidebar">
+        <div class="tabs">
+          <button id="design-tab" class="tab active">Design</button>
+          <button id="data-tab" class="tab">Data</button>
+        </div>
+
+        <!-- Tab Content -->
+        <div class="tab-content">
+          <!-- Design Tab -->
+          <div id="design-content" class="tab-pane active">
+            <h3>Design Properties</h3>
+            <label for="bg-color">Background Color:</label>
+            <input type="color" id="bg-color" value="#ffffff" />
+
+            <label for="text-color">Text Color:</label>
+            <input type="color" id="text-color" value="#000000" />
+
+            <label for="font-size">Font Size:</label>
+            <input type="number" id="font-size" value="16" />
+          </div>
+
+          <!-- Data Tab -->
+          <div id="data-content" class="tab-pane">
+            <h3>Link Content</h3>
+            <label for="content-type">Choose Content Type:</label>
+            <select id="content-type">
+              <option value="home">Home Page</option>
+              <option value="about">About Us</option>
+              <option value="services">Services/Products</option>
+              <option value="blog">Blog/News</option>
+            </select>
+
+            <label for="field">Field:</label>
+            <select id="field">
+              <option value="title">Title</option>
+              <option value="description">Description</option>
+              <option value="image">Image</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
